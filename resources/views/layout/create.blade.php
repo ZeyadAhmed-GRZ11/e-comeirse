@@ -3,7 +3,7 @@
 
 <x-slot name="title">
  
-Add Categories
+Add Tickets
 
 </x-slot>
 
@@ -19,7 +19,7 @@ Add Categories
        <div class="card">
           <div class="card-header">
               <h4>
-                Add Categories
+                Add Tickets
                 <a href="{{ url('categories') }}" class="btn btn-primary float-end">Back</a>
               </h4>
           </div>
@@ -30,7 +30,7 @@ Add Categories
                  @csrf
  
                    <div class="mb-3">
-                            <label for="">Name</label>
+                            <label for="">Title of problem:</label>
                             <input type="text" name="name" class="form-control" value="{{ old('name') }}">
 
                             @error('name')
@@ -38,19 +38,13 @@ Add Categories
                             @enderror
                    </div>
                    <div class="mb-3">
-                            <label for="">Description</label>
+                            <label for="">Details:</label>
                             <textarea class="form-control" rows="3" name="description">{{ old('description') }}</textarea>
                             @error('description')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                    </div>
-                   <div class="mb-3">
-                            <label for="">Is Active</label>
-                            <input type="checkbox" name="is_active" {{ old('is_active') }} == true ? checked:''  />
-                            @error('is_active')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                   </div>
+                
                    <div class="mb-3">
                         
                             <button type="submit" class="btn btn-primary">Save</button>
@@ -64,5 +58,6 @@ Add Categories
   </div>
 </div>
 
+<hr />
 
 @endsection

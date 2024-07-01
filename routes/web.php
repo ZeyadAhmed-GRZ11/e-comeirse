@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+// use App\Http\Middleware\adminData;
+// use App\Http\Middleware\Authenticate;
+// use App\Http\Middleware\auth;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +21,7 @@ use App\Http\Controllers\CategoryController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+Auth::routes();
 
 Route::get('welcome', [App\Http\Controllers\CategoryController::class,'welcome']);
 Route::get('categories', [App\Http\Controllers\CategoryController::class,'index']);
@@ -25,4 +30,11 @@ Route::post('categories/create', [App\Http\Controllers\CategoryController::class
 Route::get('categories/{id}/edit', [App\Http\Controllers\CategoryController::class,'edit']);
 Route::put('categories/{id}/edit', [App\Http\Controllers\CategoryController::class,'update']);
 Route::get('categories/{id}/delete', [App\Http\Controllers\CategoryController::class,'destroy']);
+Route::get('qa', [App\Http\Controllers\CategoryController::class,'qa']);
+Route::get('/', [App\Http\Controllers\CategoryController::class,'view']);
 
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/users/{user}', 'UserController@show')->middleware('adminData');

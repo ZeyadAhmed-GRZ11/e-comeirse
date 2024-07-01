@@ -3,7 +3,7 @@
 
 <x-slot name="title">
  
- Categories
+Tickets
 
 </x-slot>
 
@@ -13,8 +13,8 @@
        <div class="card">
           <div class="card-header">
               <h4>
-                Categories
-                <a href="{{ url('categories/create') }}" class="btn btn-primary float-end">Add Category</a>
+              Tickets
+                <a href="{{ url('categories/create') }}" class="btn btn-primary float-end">Add Ticket</a>
               </h4>
           </div>
           <div class="card-body">
@@ -27,9 +27,8 @@
 
                    <tr>
                       <th>ID</th>
-                      <th>Name</th>
-                      <th>Is Active</th>
-                      <th>Action</th>
+                      <th>Title of problem</th>
+                      <th>Details</th>
                   </tr>     
 
                  </thead>
@@ -42,13 +41,6 @@
                             <td>{{  $item ->name }}</td>
                             <td>{{  $item ->description }}</td>
 
-                            <td>
-                              @if ($item ->is_active)
-                                  Active
-                              @else
-                              In-Active
-                              @endif
-                            </td>
 
                             <td>
                               <a href=" {{ url('categories/'.$item->id.'/edit') }} " class="btn btn-success">Edit</a>
@@ -69,5 +61,6 @@
   </div>
 </div>
 
+<hr />
 
 @endsection

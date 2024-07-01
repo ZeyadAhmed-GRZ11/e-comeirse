@@ -3,7 +3,7 @@
 
 <x-slot name="title">
  
-Edit Categories
+Edit Tickets
 
 </x-slot>
 
@@ -19,7 +19,7 @@ Edit Categories
        <div class="card">
           <div class="card-header">
               <h4>
-                Edit Categories
+                Edit Tickets
                 <a href="{{ url('categories') }}" class="btn btn-primary float-end">Back</a>
               </h4>
           </div>
@@ -31,7 +31,7 @@ Edit Categories
                  @method("PUT")
  
                    <div class="mb-3">
-                            <label for="">Name</label>
+                            <label for="">Title of problem:</label>
                             <input type="text" name="name" class="form-control" value="{{ $categories->name }}">
 
                             @error('name')
@@ -39,7 +39,7 @@ Edit Categories
                             @enderror
                    </div>
                    <div class="mb-3">
-                            <label for="">Description</label>
+                            <label for="">Details:</label>
                             <textarea class="form-control" rows="3" name="description">{{ $categories->description }}</textarea>
                             @error('description')
                                 <span class="text-danger">{{ $message }}</span>
@@ -65,5 +65,6 @@ Edit Categories
   </div>
 </div>
 
+<hr />
 
 @endsection

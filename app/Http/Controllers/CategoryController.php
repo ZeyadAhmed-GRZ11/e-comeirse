@@ -19,16 +19,14 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required|max:255|string',
             'description' => 'required|max:255|string',
-            'is_active' => 'sometimes'
         ]);
 
         category::create([
             'name' => $request->name,
             'description' => $request->description,
-            'is_active' => $request->is_active == true? 1:0,
         ]);
 
-        return redirect('categories/create')-> with('status','category Created');
+        return redirect('categories/create')-> with('status','Ticket Created');
     }
 
     public function edit(int $id){
@@ -41,25 +39,31 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required|max:255|string',
             'description' => 'required|max:255|string',
-            'is_active' => 'sometimes'
         ]);
 
         category::findOrFail($id)->update([
             'name' => $request->name,
             'description' => $request->description,
-            'is_active' => $request->is_active == true? 1:0,
         ]);
 
-        return redirect()->back()->with('status','category Updated');
+        return redirect()->back()->with('status','Ticket Updated');
     }
 
     public function destroy(int $id){
       $category = category::findOrFail($id);
       $category->delete();
-      return redirect()->back()->with('status','category Deleted');
+      return redirect()->back()->with('status','Ticket Deleted');
     }
+
+    
     public function welcome(){
         return view('welcome');
+    }
+    public function view(){
+        return view('view');
+    }
+    public function qa(){
+        return view('layout.qa');
     }
 
 }

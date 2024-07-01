@@ -1,0 +1,295 @@
+.map{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Hero Section */
+
+.hero {
+  background-image: linear-gradient(to bottom, #333, #555);
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.hero button:hover {
+  background-color: #3e8e41;
+}
+
+/* Features Section */
+
+.features {
+  padding-top: 50px;
+}
+
+.feature-list {
+  list-style: none;
+  margin-top: -20px; /* compensate for the bottom padding of the feature items */
+}
+
+.feature-list li {
+  display: flex;
+}
+
+.feature-list i {
+   font-size :24px; 
+   margin-right :10px; 
+   color :#666; 
+   transition :color .2s ease-in-out; 
+} 
+
+.feature-list i:hover {
+   color :#4CAF50; 
+} 
+
+.feature-list h3 {
+   font-size :18px; 
+   margin-bottom :10px; 
+} 
+
+.feature-list p {
+   font-size :14px; 
+   margin-bottom :20px; 
+} 
+
+/* Call-to-Action Section */
+
+.call-to-action {
+   background-color :#333; 
+   padding-top :20px; 
+   padding-bottom :20px; 
+   text-align:center; 
+   color :#fff; 
+} 
+
+.call-to-action h2 {
+   font-size :24px; 
+} 
+
+.call-to-action button { 
+   background-color :#4CAF50; 
+   color :#fff; 
+   padding :10px ; 
+   border-radius :5px ; 
+} 
+
+.call-to-action button:hover { 
+   background-color :#3e8e41; 
+} 
+
+/* Footer */
+
+footer {  
+    background-color :#333;  
+    padding-top :10px ;  
+    padding-bottom :10px ;  
+    text-align:center ;  
+    color :#fff ;  
+} 
+
+.social-media {  
+    list-style-type:none ;  
+    margin-left:-20px ;  
+    padding-left :0 ;  
+    text-align:center ;  
+} 
+
+.social-media li {  
+    display:inline-block ;  
+    margin-right :10px ;  
+} 
+
+.social-media a {  
+    color:#666 ;  
+    transition :color .2s ease-in-out ;  
+} 
+
+.social-media a:hover {  
+    color:#4CAF50 ;  
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin-bottom: 10px;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .social-media {
+    margin-top: 20px;
+  }
+  
+  .social-media h5 {
+    font-size: 16px;
+  }
+  
+  .social-media ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-media li {
+    margin-right: 10px;
+  }
+  
+  .social-media a {
+    color: #fff;
+  }
+  
+  .newsletter {
+    margin-top: 20px;
+  }
+  
+  .newsletter h5 {
+    font-size: 16px;
+  }
+  
+  .newsletter form {
+    width: calc(100% - 20px);
+  }
+  
+  .newsletter input[type="email"] {
+    width: calc(70% - 20px);
+  }
+  
+  .newsletter button[type="submit"] {
+    width: calc(30% - 20px);
+  }
+  
+  .copyright {
+    font-size: 14px;
+  }
